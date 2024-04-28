@@ -6,8 +6,20 @@
 </head>
 <body>
     <script type="module">
-        import {testFunc} from "./src/index.js";
-        testFunc()
+        // import {testFunc} from "./src/index.js";
+        // testFunc()
+
+        class Video{
+            constructor({url='123', abc='456'}) {
+                this.url=url
+                this.abc=abc
+            }
+        }
+        const v = new Video({
+            url:'xyz'
+        })
+        console.log(v.url)
+        console.log(v.abc)
     </script>
 </body>
 </html>

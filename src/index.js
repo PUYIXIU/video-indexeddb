@@ -1,3 +1,19 @@
+/*
+* 视频对象类
+*   - 存储视频元数据（url，大小，storage名称等信息）
+*   - 视频加载
+*   - 获取buffer
+*   - 合并切片
+* 数据库操作类
+*   - 对视频数据进行数据库操作
+*       - 打开
+*       - 关闭
+*       - 查询
+*       - 读取
+*       - 写入
+*
+* */
+
 /**
  * 加载并缓存视频资源
  * 如果视频是首次加载，对视频数据进行缓存
@@ -10,6 +26,7 @@
  *     storageName:'', // 存储区域标识
  *     type: 'video/mp4', // 视频格式
  *     sliceSize: Math.pow(2, 16), // 切片大小
+ *     dbVersion: 3, // 数据库版本
  * }
  */
 import {concatBlobList, concatBlobs, getUUID, getVideoBuffer, loadVideo} from "./blob.js";
